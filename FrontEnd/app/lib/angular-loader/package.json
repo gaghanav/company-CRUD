@@ -2,7 +2,7 @@
   "_args": [
     [
       "angular-loader@1.7.5",
-      "E:\\Project\\angularJs\\Angularjs-CRUD-Employee"
+      "E:\\Project\\angularJs\\FrontEnd"
     ]
   ],
   "_from": "angular-loader@1.7.5",
@@ -26,7 +26,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/angular-loader/-/angular-loader-1.7.5.tgz",
   "_spec": "1.7.5",
-  "_where": "E:\\Project\\angularJs\\Angularjs-CRUD-Employee",
+  "_where": "E:\\Project\\angularJs\\FrontEnd",
   "author": {
     "name": "Angular Core Team",
     "email": "angular-core+npm@google.com"

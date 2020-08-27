@@ -12,6 +12,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpStatusCodeException;
 
 import javax.xml.ws.Response;
 
@@ -42,7 +43,7 @@ public class EmployeeController {
     }
 
     @PostMapping
-    public ResponseEntity<Employee> insert(@RequestBody Employee employee){
+    public ResponseEntity<Employee> insert(@RequestBody Employee employee) {
         System.out.println(employee.getTransientPositionId());
         for (Position p: positionService.getList()
              ) {

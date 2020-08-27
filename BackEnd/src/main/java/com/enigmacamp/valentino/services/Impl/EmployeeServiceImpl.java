@@ -33,7 +33,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee insert(Employee employee) {
         employee.setIsDelete(0);
         if(employeeDAO.existsEmployeeByIdNumber(employee.getIdNumber())) {
-            throw new EmployeeIdNumberAlreadyExist(employee.getIdNumber());
+            throw new EmployeeIdNumberAlreadyExist();
         }
         else return employeeDAO.save(employee);
     }

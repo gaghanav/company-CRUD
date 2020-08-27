@@ -24,7 +24,7 @@ passingData.controller('View2Ctrl', function($scope, $http, $location) {
   $scope.idNumber = null;
   $scope.gender = null;
   $scope.postData = function (name,birthDate,positionIdTransient,idNumber,gender) {
-    let said = confirm('Are you sure want to submit this ?'+positionIdTransient);
+    let said = confirm('Are you sure want to submit this ?');
     if (said==true) {
     let data = {
       name: name,
@@ -41,10 +41,10 @@ passingData.controller('View2Ctrl', function($scope, $http, $location) {
         $location.path("#!/view1")
         }
       }, function (respon) {
-        $scope.msg = "Service not Exists";
-        $scope.statusval = respon.status;
-        $scope.statustext = respon.statusText;
-        $scope.headers = respon.headers();    
+        console.log("ini status "+respon.status);
+        if(respon.status==406){
+          alert("Employee ID Number Already Exist")
+        }
       }
       )
     }

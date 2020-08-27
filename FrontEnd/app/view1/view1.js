@@ -16,6 +16,7 @@ list.controller('getEmployees', function($scope, $http) {
       method: 'GET',
       url: 'http://localhost:8080/employee/index?page=1&size=5'
     }).then(function success(response) {
+      console.log("ini log get employee "+response);
       $scope.value = response.data.content
     })
   })
