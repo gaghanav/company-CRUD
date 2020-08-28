@@ -10,8 +10,8 @@
 	</parent>
 	<groupId>com.enigmacamp</groupId>
 	<artifactId>valentino</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>valentino</name>
+	<version>0.1</version>
+	<name>Company-CRUD</name>
 	<description>Project Tahap 2</description>
 
 	<properties>
@@ -51,6 +51,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<inherited>true</inherited>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
