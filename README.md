@@ -9,15 +9,28 @@ Requirements
 ```
 ## DB Settings
 ```text
+This is the DataBase settings used when creating this project
 DB name : company
 DB username : root
 DB password :
 ```
 
+## BackEnd application.properties settings
+```code
+spring.datasource.url=jdbc:mysql://localhost/company?useSSL=false&serverTimezone=UTC
+spring.datasource.username={YOUR_DB_USERNAME}
+spring.datasource.password={YOUR_DB_PASSWORD}
+spring.jpa.properties.globally_quoted_identifiers=true
+server.port=8080
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+
 ## How to import DB
 ```text
 - Open terminal
-- Type "mysql -u root -p company < "company.sql"
+- Type "mysql -u {YOUR_DB_USERNAME} -p company < "company.sql"
 ```
 
 
@@ -29,28 +42,30 @@ DB password :
 
 ## How to run Java Spring Boot BackEnd
 ```text
+#NOTE:You Must Use DB Username "Root" and DB Password "" or Blank to do below steps 
+
 - Open terminal inside /BackEnd/target folder
 - Type "java -jar valentino-0.1.jar"
 ```
 ## Front End Index
-![image](FE-index.PNG)
+![image](screenshot/FE-index.PNG)
 
 ## Front End Add Page
-![image](FE-add.PNG)
+![image](screenshot/FE-add.PNG)
 
 ## Front End Edit Page
-![image](FE-edit.PNG)
+![image](screenshot/FE-edit.PNG)
 
 ## Front End Delete Confirmation
-![image](FE-deleteConfirmation.PNG)
+![image](screenshot/FE-deleteConfirmation.PNG)
 
 ## Front End Add Confirmation
-![image](FE-addConfirmation.PNG)
+![image](screenshot/FE-addConfirmation.PNG)
 
 ## Front End Edit Confirmation
-![image](FE-editConfirmation.PNG)
+![image](screenshot/FE-editConfirmation.PNG)
 
 ## Front End Add Duplicate NIP Error
-![image](FE-addDuplicateNIP.PNG)
+![image](screenshot/FE-addDuplicateNIP.PNG)
 
 
