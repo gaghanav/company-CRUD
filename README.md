@@ -16,7 +16,7 @@ DB password :
 ## 3. Create Empty DataBase
 ```text
 - Open terminal
-- type "mysql -u {DB_USERNAME} -p"
+- type "mysql -u {YOUR_DB_USERNAME} -p"
 - then type "CREATE DATABASE company;"
 ```
 
