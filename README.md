@@ -39,6 +39,8 @@ spring.jpa.show-sql=true
 
 - Open terminal inside /BackEnd/target folder
 - Type "java -jar valentino-0.1.jar"
+or
+- Run The BackEnd Java Spring Boot aplication from an IDE  
 ```
 
 ## 5. How to Auto Populate Employee & Position Table
@@ -53,8 +55,6 @@ spring.jpa.show-sql=true
 - Type "npm run start"
 ```
 
-
-## 7. ScreenShots
 ## Front End Index
 ![image](screenshot/FE-index.PNG)
 
