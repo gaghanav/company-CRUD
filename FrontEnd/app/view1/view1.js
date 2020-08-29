@@ -16,7 +16,6 @@ list.controller('getEmployees', function($scope, $http) {
       method: 'GET',
       url: 'http://localhost:8080/employee/index?page=1&size=5'
     }).then(function success(response) {
-      console.log("ini log get employee "+response);
       $scope.value = response.data.content
     })
   })
@@ -28,11 +27,9 @@ list.controller('getEmployees', function($scope, $http) {
 list.controller('deleteServiceCtrl', function ($scope, $http) {
   $scope.id = null;
   $scope.deletedata = function (data) {
-  let said = confirm('Are you sure want to delete ?');
+  let said = confirm('are you sure want to delete Employee with id = '+data.id+' ?');
 
-  if(said==false) {
-    console.log('you out');
-  } else {
+  if(said) {
   $http({
     method: 'DELETE',
     url: 'http://localhost:8080/employee',

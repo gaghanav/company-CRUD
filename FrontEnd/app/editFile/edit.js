@@ -22,16 +22,18 @@ passingData.controller('getEmployeeById', function($scope, $http, $routeParams) 
 passingData.controller('putEmployee', function($scope, $http, $location) {
   
   $scope.putData = function (id,name,birthDate,position,idNumber,gender) {
+    let said = confirm('Are you sure want to submit this ?');
+    if(said==true){
+      let data = {
+        id:id,
+        name: name,
+        birthDate: birthDate,
+        position: position,
+        idNumber: idNumber,
+        gender: gender,
+        isDelete: 0
+      };
     
-    var data = {
-      id:id,
-      name: name,
-      birthDate: birthDate,
-      position: position,
-      idNumber: idNumber,
-      gender: gender,
-      isDelete: 0
-    };
     $http.put('http://localhost:8080/employee', JSON.stringify(data)).then(function (respon) {
       if(respon.data)
       $scope.msg ="Post Data Submitted Successfully!"
@@ -44,5 +46,6 @@ passingData.controller('putEmployee', function($scope, $http, $location) {
     }
     )
   }
+}
 })
 

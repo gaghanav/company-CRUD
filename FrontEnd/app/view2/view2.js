@@ -51,12 +51,7 @@ passingData.controller('View2Ctrl', function($scope, $http, $location) {
     else {
       alert("Please fill all the form") 
     }
-
-    
-  } else {
-    console.log('you out');
-  }
-
+  } 
   }
 })
 
